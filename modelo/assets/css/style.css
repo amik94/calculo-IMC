@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 :root {
-  --primary-color: rgb(17, 86, 102);
-  --primary-color-darker: rgb(9, 48, 56);
+  --primary-color: rgb(170,170,194);
+  --primary-color-darker: rgb(0, 0, 0);
+  --primary-color-success: rgb(128, 255, 212);
+  --primary-color-fail: rgb(255, 150, 150);
 }
 
 * {
@@ -15,16 +17,28 @@ body {
   background: var(--primary-color);
   font-family: 'Open sans', sans-serif;
   font-size: 1.3em;
+  overflow: hidden;
+  max-width: 100%;
   line-height: 1.5em;
 }
 
 .container {
   max-width: 640px;
   margin: 50px auto;
+  position: relative;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
 }
+
+.image-right {
+  background-repeat: no-repeat;
+  position: absolute;
+  max-width: 500px;
+  right: 0;
+  bottom: 0;
+}
+
 
 form input, form label, form button {
   display: block;
@@ -55,4 +69,14 @@ form button {
 
 form button:hover {
   background: var(--primary-color-darker);
+}
+
+.success {
+  background-color: var(--primary-color-success);
+  padding: 10px 20px;
+}
+
+.fail {
+  background: var(--primary-color-fail);
+  padding: 10px 20px;
 }
